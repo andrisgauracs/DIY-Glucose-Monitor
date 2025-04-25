@@ -30,6 +30,12 @@ Supplies
 - Tactile Push Button Switch x1
 - Test Stand PCB Clip 2.54mm x2
 
+## The Schematic
+
+![glucose_monitor_schematic](https://github.com/user-attachments/assets/96ab6ead-1a19-458d-9163-030ee6e1cc9d)
+
+Here’s the schematic of my setup. Since this was my first attempt at designing one, there might be a few mistakes or rough edges, but it captures the core idea.
+
 ## The Setup
 To begin, I needed to understand how commercial glucose test strips work and how their signals can be measured. These strips typically contain two key components: the Working Electrode (WE) and the Reference Electrode (RE). The RE must be supplied with the steady bias voltage to maintain a fixed electrochemical potential, while the WE is where the chemical reaction occurs and generates a measurable current. That current - which correlates with glucose concentration - must be then converted into a readable voltage.
 
@@ -46,6 +52,8 @@ But high sensitivity often comes at the cost of increased noise. To stabilize th
 This configuration gave me a clean, stable, and highly sensitive signal - ideal for capturing meaningful trends in glucose concentration based on the voltage drop observed at the WE.
 
 ## Data Analysis
+
+![glucose_test_results](https://github.com/user-attachments/assets/89aeff70-7f94-4e5c-a390-8531ce33767e)
 
 At first, I saw noticeable voltage dips during my tests and was pumped - it looked like I had captured a real glucose reaction! But little did I know how unstable, noisy, and unpredictable those readings could be. The voltage drop can vary dramatically depending on factors like humidity, temperature, the quality of the enzyme coating, and even tiny vibrations in the setup.
 
