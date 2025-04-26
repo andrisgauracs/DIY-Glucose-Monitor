@@ -69,6 +69,8 @@ Another important constraint was that I wanted my DIY monitor to run entirely of
 
 At first, I tried to fit a simple polynomial regression to my data, hoping to extract a compact mathematical formula I could hard-code into my program. But none of the polynomial models I tested gave me a good enough Mean Absolute Error (MAE). I eventually switched to a Random Forest Regressor, which offered the best overall performance given my small dataset. I managed to achieve an MAE of around 0.96 mmol/L, which was surprisingly good - especially considering the model used only 15 estimators and a maximum depth of 6. This kept the model small enough to fit within my Uno’s constraints while still delivering solid predictions.
 
+![Figure_1](https://github.com/user-attachments/assets/d08c6637-f971-457b-8910-2c7bba6f0b10)
+
 To deploy it, I used a Python library called micromlgen, which converts trained scikit-learn models into compact C++ functions ready for embedded boards. With that, I had a working prediction engine running entirely offline, powered by a few kilobytes of code and a handful of well-chosen features.
 
 ## Final Steps
